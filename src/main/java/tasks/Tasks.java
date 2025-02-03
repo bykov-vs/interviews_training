@@ -21,7 +21,7 @@ public class Tasks {
         return new StringBuilder(word)
                 .reverse()
                 .toString()
-                .equals(word);
+                .equalsIgnoreCase(word);
     }
 
     /**
@@ -29,8 +29,8 @@ public class Tasks {
      * @param list массив
      * @return массив без повторений
      */
-    public List<?> removeDuplicates(List<?> list) {
-        return new ArrayList<>(new TreeSet<>(list));
+    public static List<?> removeDuplicates(List<?> list) {
+        return new ArrayList<>(new LinkedHashSet<>(list));
     }
 
     /**
