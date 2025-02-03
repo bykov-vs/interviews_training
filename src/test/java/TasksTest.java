@@ -1,9 +1,8 @@
 import org.testng.annotations.Test;
-import tasks.ImmutableList;
 
-import java.util.*;
+import java.util.List;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
 import static tasks.Tasks.*;
 
 public class TasksTest {
