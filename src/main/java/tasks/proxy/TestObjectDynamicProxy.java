@@ -6,8 +6,8 @@ import tasks.TestObject;
 public class TestObjectDynamicProxy implements TestInterface {
     private final TestObject testObject;
 
-    public TestObjectDynamicProxy(TestObject testObject) {
-        this.testObject = testObject;
+    public TestObjectDynamicProxy() {
+        this.testObject = new TestObject();
     }
 
     @Override
