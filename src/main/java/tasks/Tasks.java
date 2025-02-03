@@ -49,15 +49,18 @@ public class Tasks {
 
         for (int i = 0; i < list.size(); i++) {
             first = list.get(i);
-            firstIndex = i;
             for (int j = i + 1; j < list.size(); j++){
                 second = list.get(j);
-                secondIndex = j;
-                if (first + second == sum) break;
+                if (first + second == sum) {
+                    secondIndex = j;
+                    break;
+                }
             }
-            if (first + second == sum) break;
+            if (first + second == sum) {
+                firstIndex = i;
+                break;
+            }
         }
-        if (first + second == sum) return List.of(firstIndex, secondIndex);
-        else return List.of(-1, -1);
+        return List.of(firstIndex, secondIndex);
     }
 }
