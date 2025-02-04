@@ -1,7 +1,7 @@
 import tasks.proxy.TestObjectDynamicProxy;
 import tasks.proxy.TestObjectProxy;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         TestObjectProxy testObjectProxy = new TestObjectProxy();
         TestObjectDynamicProxy testObjectDynamicProxy = new TestObjectDynamicProxy();
