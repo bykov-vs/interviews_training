@@ -57,13 +57,4 @@ public class TasksDataProvider {
                 }
         };
     }
-
-    @DataProvider
-    public Object[] getRandomDifferentLists() {
-        return new Object[]{
-                List.of(1, 2, 1, 3, 5, 5, 5, 5),
-                List.of("drr", "brr", "grr", "br", "brr", "frr"),
-                List.of(13.2, 15.11, 27.9),
-        };
-    }
 }

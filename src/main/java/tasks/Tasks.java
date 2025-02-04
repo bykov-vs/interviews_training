@@ -63,4 +63,30 @@ public class Tasks {
         }
         return List.of(firstIndex, secondIndex);
     }
+
+    /**
+     * Получить пару первых двух чисел, в сумме дающих нужную сумму
+     * @param list массив чисел
+     * @param sum целевая сумма
+     * @return массив из двух чисел - индексов первой пары
+     */
+    public static List<Integer> getFirstIndexesOfPairBySum(
+            List<Integer> list, Integer sum
+    ) {
+        if (list.size() < 2) {
+            return List.of(-1, -1);
+        }
+
+        HashMap<Integer, Integer> indexMap = new HashMap<>();
+        for (int i = 0; i < list.size(); i++) {
+            int current = list.get(i);
+            if (indexMap.containsKey(current)) {
+                return List.of(indexMap.get(current), i);
+            }
+
+            int second = sum - list.get(i);
+            indexMap.put(second, i);
+        }
+        return List.of(-1, -1);
+    }
 }
