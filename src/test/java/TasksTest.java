@@ -1,4 +1,5 @@
 import org.testng.annotations.Test;
+import tasks.ImmutableList;
 
 import java.util.List;
 
@@ -7,6 +8,7 @@ import static tasks.Tasks.*;
 
 public class TasksTest {
     @Test(
+            description = "Проверка суммирования через Stream Api",
             dataProvider = "getRandomDigits",
             dataProviderClass = TasksDataProvider.class
     )
@@ -17,6 +19,7 @@ public class TasksTest {
     }
 
     @Test(
+            description = "Проверка слов палиндромов",
             dataProvider = "getRandomWords",
             dataProviderClass = TasksDataProvider.class
     )
@@ -27,6 +30,7 @@ public class TasksTest {
     }
 
     @Test(
+            description = "Проверка удаления дупликатов из списка",
             dataProvider = "getRandomLists",
             dataProviderClass = TasksDataProvider.class
     )
@@ -37,7 +41,8 @@ public class TasksTest {
     }
 
     @Test(
-            dataProvider = "getRandomDigitLists",
+            description = "Проверка поиска первой пары, дающих целевую сумму",
+            dataProvider = "getRandomDigitListsWithSum",
             dataProviderClass = TasksDataProvider.class
     )
     public void testSumPairs(List<Integer> list, int sum, List<?> expectedValue) {

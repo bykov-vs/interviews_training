@@ -1,16 +1,19 @@
 package tasks;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public final class ImmutableList {
-    private final List<?> list;
+public final class ImmutableList<T> {
+    private final List<T> list;
 
-    public ImmutableList(List<?> list) {
-        this.list = new ArrayList<>(list);
+    public ImmutableList(List<T> list) {
+        this.list = List.copyOf(list);
     }
 
-    public List<?> getList() {
-        return new ArrayList<>(list);
+    public List<T> getList() {
+        return List.copyOf(list);
+    }
+
+    public T get(int index) {
+        return List.copyOf(list).get(index);
     }
 }
