@@ -30,7 +30,7 @@ public class TasksTest {
     }
 
     @Test(
-            description = "Проверка удаления дупликатов из списка",
+            description = "Проверка удаления дубликатов из списка",
             dataProvider = "getRandomLists",
             dataProviderClass = TasksDataProvider.class
     )
